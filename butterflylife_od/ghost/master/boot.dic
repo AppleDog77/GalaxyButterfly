@@ -1,0 +1,105 @@
+OnFirstBoot
+{
+	//If you add variables, make sure to initialize them here!
+	//Note - I haven't added anything about username or pronouns here because it's all handled by the SSP prefs
+	passhour = 0
+	passmin = 0
+	passsec = 0
+	LastTalk = ""
+	caterpillar = 0
+	pupa = 0
+	butterfly = 0
+	lifecycle = 0
+	
+	"\1\s[10]\0\s[0]A galaxy butterfly lays her eggs on the topmost leaf of the starflower plant. Caterpillars begin to form inside the tiny dots."
+}
+
+OnInitialize
+{
+	//If you want some variables to reset on boot, put them here. This event will happen even if you add other events like OnGhostChanged
+	//OnInitialize is a NOTIFY event! That means it cannot return scripts. This event is only meant for things like variable changes. See this page on Ukadoc for more info: https://ukagakadreamteam.github.io/ukadoc/manual/spec_shiori3.html
+	
+	//If you add new variables in updates, I recommend initializing them like so:
+	//if !ISVAR("NewVariable"); NewVariable = 0
+	//This means that it will only set the new variable if the user doesn't already have it, so that their variables don't get overwritten
+	passhour = 0
+	passmin = 0
+	passsec = 0
+	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
+	{
+		LastTalk = ""
+	}
+}
+
+OnBoot
+{
+	_temp = SHIORI3FW.UserBirthday
+	_user_birthday = "%(_temp[1])/%(_temp[2])" //M/D, if you want it D/M you can switch it around
+	_today = "%(month)/%(day)" //Again, switch this around if using D/M
+	
+	"\1\s[10]\0\s[0]"
+	--
+	if _today == _user_birthday
+	{
+		"\0\s[0]Happy birthday %(username)."
+	}
+	elseif _today == "1/1" //You can add whatever cool dates you want with more elseifs here
+	{
+		"\0\s[0]A new year for new butterflies."
+	}
+	else //Normal boot
+	{
+		"\0\s[0]Let's visit the butterflies!"
+	}
+}
+
+OnClose
+{
+	"\0\s[0]Finished visiting the butterflies."
+	--
+	"\w8\w8\-" //This is what makes the ghost close (after a short pause), do not remove the \- , and MAKE SURE you don't use a \e before this point or it won't work
+}
+
+OnSecondChange
+ {
+	if passsec == 59
+ 		{
+	 	passsec = 0
+ 		passmin = passmin + 1
+		lifecycle = lifecycle + 1
+		OnLifecycle
+		}
+ 	else
+ 		{
+	 	passsec = passsec + 1
+		}
+ }
+ 
+OnLifecycle
+ {
+	 if lifecycle >= 5 && lifecycle <= 29
+	 {
+		 pupa = 0
+		 butterfly = 0
+		 caterpillar = 1
+	 }
+	 elseif lifecycle >= 30 && lifecycle <= 59
+	 {
+		 pupa = 1
+		 butterfly = 0
+		 caterpillar = 0
+	 }	 
+	 elseif lifecycle >= 60
+	 {
+		 pupa = 0
+		 butterfly = 1
+		 caterpillar = 0
+	 }
+	 else
+	 {		 
+		 pupa = 0
+		 butterfly = 0
+		 caterpillar = 0
+	 }
+ }
+ 

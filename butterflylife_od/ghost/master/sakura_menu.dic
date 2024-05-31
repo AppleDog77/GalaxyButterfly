@@ -1,0 +1,117 @@
+SakuraMenuGreetings : nonoverlap
+{
+	"Butterflies are %(adjectives)!"
+}
+
+//Because there is an all modifier here, you don't need to write -- between menu options
+OnSakuraMenu : all
+{
+	wd = GetWeekDay
+ 	ap = GetAP
+	
+	"\0\s[0]\b2\![set,autoscroll,disable]"
+	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
+	
+	"\n\n\_q"
+	
+	"\![*]\q[What's happening now?,OnAiTalk]"
+	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
+	"\n\n"
+
+	"\![*]\q[Change talk rate,OnTalkRateMenu]\n\n"
+
+	"\![*]\q[Lay a new egg,OnNewEgg]\n\n"
+
+	"\![*]\q[Nevermind,blank]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\n\n\_l[0,264]Run Time: %(passhour):%(passmin)  %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)"	
+}
+
+OnLastTalk
+{
+	LastTalk
+}
+
+OnTalkRateMenu : all
+{	
+	//This is just setting up a label, you may need to add to it or tweak it if you change what rates are available
+	_talkrate = "Off"
+	if aitalkinterval == 30; _talkrate = "30 seconds"
+	elseif aitalkinterval == 60; _talkrate = "1 minute"
+	elseif aitalkinterval == 180; _talkrate = "3 minutes"
+	elseif aitalkinterval == 300; _talkrate = "5 minutes"
+	elseif aitalkinterval == 600; _talkrate = "10 minutes"
+	
+	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
+	"Current interval: %(_talkrate)\n\n"
+	
+	"\![*]\q[Off,OnTalkRateChange,0]\n"
+	"\![*]\q[30 seconds,OnTalkRateChange,30]\n"
+	"\![*]\q[1 minute,OnTalkRateChange,60]\n"
+	"\![*]\q[3 minutes,OnTalkRateChange,180]\n"
+	"\![*]\q[5 minutes,OnTalkRateChange,300]\n"
+	"\![*]\q[10 minutes,OnTalkRateChange,600]\n"
+	"\n"
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
+}
+
+OnTalkRateChange
+{
+	aitalkinterval = TOINT(reference0)
+}
+
+GetWeekDay
+{
+	if weekday == 0
+	{"Sun"}
+	elseif weekday == 1
+	{"Mon"}
+	elseif weekday == 2
+	{"Tue"}
+	elseif weekday == 3
+	{"Wed"}
+	elseif weekday == 4
+	{"Thu"}
+	elseif weekday == 5
+	{"Fri"}
+	else
+	{"Sat"}
+}
+
+
+//This is finding out whether it's AM or PM. Leave it alone.
+GetAP
+{
+ 	if hour >= 0 && hour <= 11
+ 		{"AM"}
+ 	else
+ 		{"PM"}
+}
+
+nowhour
+{
+	if hour12 == 0; "1"
+	else; "%(hour12)"
+}
+
+nowmin
+{
+	if minute >= 0 && minute <=9; "0%(minute)"
+	else; "%(minute)"
+}
+
+OnNewEgg
+{
+	"\0\s[0]Confirm laying a new egg? This will reset all your progress!\n\n\![*]\q[Yes,egglaying]\n\![*]\q[No,cancelescape]\e"
+}
+
+Select.egglaying
+{
+	"\0\s[1]The galaxy butterflies lay their eggs on the topmost leaf of the starflower plant, and then fly away to unknown lands. Caterpillars begin to form inside the tiny dots."
+	passhour = 0
+	passmin = 0
+	passsec = 0
+	LastTalk = ""
+	caterpillar = 0
+	pupa = 0
+	butterfly = 0
+	lifecycle = 0
+}

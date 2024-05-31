@@ -1,0 +1,5 @@
+charset,UTF-8
+type,ghost
+
+name,Galaxy Butterfly
+directory,butterflylife_od

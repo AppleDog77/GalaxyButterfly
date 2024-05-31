@@ -1,0 +1,65 @@
+OnAiTalk
+{
+	if CHAIN.IDName == ""
+	{
+		LastTalk = RandomTalk
+	}
+	else
+	{
+		LastTalk = ChainTalk
+	}
+	LastTalk
+}
+
+RandomTalk : nonoverlap_pool
+{
+	if caterpillar == 1
+		{
+		"\0\s[2]The starflower gets voraciously devoured by the caterpillars."
+		"\0\s[2]A caterpillar chews the leaves of the plant. She seems to be thinking about %(thoughts)."
+		"\0\s[2]The caterpillars can't seem to go a second without eating!"
+		"\0\s[2]In between constantly eating leaves to grow, a caterpillar has a few minutes to chat with his friends about the wonders of the world around them."
+		"\0\s[2]A caterpillar has become full for at least a little while. They are laying on their back,\w4 looking up at the stars."
+		"\0\s[2]The caterpillars try to jump higher than each other."
+		"\0\s[2]An eight-legged giant creature walks through the forest, interrupting the the caterpillars' breakfast as they turn to observe."
+		"\0\s[2]The caterpillars chase each other around, but if one is caught, the game stops immediately,\w4 and they go back to eating."
+		"\0\s[2]Sometimes a caterpillar wonders what he looks like. Other times he wonders why the trees around him are of different sizes and shapes."
+		"\0\s[2]A bird swooshes down to try and catch the caterpillars!\w8 They all run and hide in a nearby star gifted by the starflower."
+		}
+	elseif pupa == 1
+		{
+		"\0\s[3]A pupa is blown around by the wind, but manages to hold on to the plant using its silk thread."
+		"\0\s[3]Inside a pupa, a caterpillar rediscovers themself. They find that they have now been rearranged into a body type more suitable for flying."
+		"\0\s[3]Inside a pupa, a caterpillar dances at a disco party."
+		"\0\s[3]A pupa can't wait to fly in the sky, like it never has before!"
+		"\0\s[3]Jumping birds keep trying to attack a vulnerable pupa,\w4 but the starflower throws projectile stars at them, discouraging the birds."
+		"\0\s[3]A pupa hopes that the other pupae are having a good time."
+		}
+	elseif butterfly == 1
+		{
+		"\0\s[4]A galaxy butterfly flies around the forest with their friends, trying to find a nice place to lay eggs."
+		"\0\s[4]Flying around, a galaxy butterfly has fun doing tricks in the sky."
+		"\0\s[4]The galaxy butterflies chase each other, but when a butterfly is caught,\w4 the game continues until they all are caught."
+		"\0\s[4]A distracted galaxy butterfly practices over and over a loop-de-loop until it is perfectly executed, much to the awe of her friends.\w8 Then she remembers she has to lay eggs."
+		"\0\s[4]A huge purple creature charges towards a nearby tree, and the butterflies dodge out the way just in time."
+		"\0\s[4]The galaxy butterflies stop playing to witness a %(creatures) wandering through the forest."
+		"\0\s[4]From time to time the galaxy butterflies take turns drinking from the starflower they grew up on."
+		"\0\s[4]The butterflies challenge each other, trying to land on the highest tree in the forest.\w5 They soon get exhausted, wondering if the trees they discovered are the highest or not."
+		"\0\s[4]A butterfly poses a challenge:\w5 each butterfly has to fly higher than the previous one, in a ring formation."
+		"\0\s[4]The galaxy butterflies stare at each other's space patterned wings. At night, they try to compare their wings with the sky above."
+		"\0\s[4]Discovering a pond during their travels, the butterflies finally get to look at themselves."
+		"\0\s[4]The butterflies puddle in the mud below the trees."
+		}
+	else
+		{
+		"\0\s[1]Inside the pinhead-sized eggs, cute little caterpillars are developing."
+		"\0\s[1]A light drizzle forms small bead shaped dewdrops on the eggs."
+		"\0\s[1]Galaxy caterpillars are wriggling around inside their eggs."
+		"\0\s[1]Various bugs crawl around the starflower and take note of the new arrivals."
+		"\0\s[1]In response to the eggs, the starflower emits various stars from inside it."
+		"\0\s[1]Water drips from the blue tree above the starflower onto a bug which was about to eat an egg. The bug crawls away as fast as he can."
+		"\0\s[1]A six-legged blue creature approaches the starflower and attempts to sniff the flower. Upon seeing the eggs, she runs away."
+		}
+
+}
+

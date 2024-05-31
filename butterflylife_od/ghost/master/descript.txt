@@ -1,0 +1,17 @@
+charset,UTF-8
+
+name,Galaxy Butterfly
+type,ghost
+
+shiori,yaya.dll
+
+craftman,odie
+craftmanw,Odie
+craftmanurl,https://odiesocean.wordpress.com/
+
+sakura.name,Galaxy Butterfly
+kero.name,Starflower
+
+icon,icon.ico
+
+sstp.allowunspecifiedsend,0
