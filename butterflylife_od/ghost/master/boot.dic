@@ -45,7 +45,7 @@ OnBoot
 	}
 	elseif _today == "1/1" //You can add whatever cool dates you want with more elseifs here
 	{
-		"\0\s[0]A new year for new butterflies."
+		"\0\s[0]A new year,\w4 and hopefully new butterflies."
 	}
 	else //Normal boot
 	{

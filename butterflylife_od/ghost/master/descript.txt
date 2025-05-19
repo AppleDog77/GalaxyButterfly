@@ -7,7 +7,7 @@ shiori,yaya.dll
 
 craftman,odie
 craftmanw,Odie
-craftmanurl,https://odiesocean.wordpress.com/
+craftmanurl,https://ladybug-lane.neocities.org/
 
 sakura.name,Galaxy Butterfly
 kero.name,Starflower

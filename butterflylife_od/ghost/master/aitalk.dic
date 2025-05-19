@@ -15,20 +15,26 @@ RandomTalk : nonoverlap_pool
 {
 	if caterpillar == 1
 		{
-		"\0\s[2]The starflower gets voraciously devoured by the caterpillars."
+		"\0\s[2]The starflower gets voraciously devoured by the caterpillars, but it grows back soon after."
 		"\0\s[2]A caterpillar chews the leaves of the plant. She seems to be thinking about %(thoughts)."
 		"\0\s[2]The caterpillars can't seem to go a second without eating!"
 		"\0\s[2]In between constantly eating leaves to grow, a caterpillar has a few minutes to chat with his friends about the wonders of the world around them."
 		"\0\s[2]A caterpillar has become full for at least a little while. They are laying on their back,\w4 looking up at the stars."
 		"\0\s[2]The caterpillars try to jump higher than each other."
-		"\0\s[2]An eight-legged giant creature walks through the forest, interrupting the the caterpillars' breakfast as they turn to observe."
+		"\0\s[2]An %(creatures) walks through the forest, interrupting the the caterpillars' breakfast as they turn to observe."
 		"\0\s[2]The caterpillars chase each other around, but if one is caught, the game stops immediately,\w4 and they go back to eating."
 		"\0\s[2]Sometimes a caterpillar wonders what he looks like. Other times he wonders why the trees around him are of different sizes and shapes."
 		"\0\s[2]A bird swooshes down to try and catch the caterpillars!\w8 They all run and hide in a nearby star gifted by the starflower."
+		"\0\s[2]The caterpillars roll around the starflower. They try to see who can roll the fastest. The game is stopped when a %(creatures) sees them rolling around and they hide."
+		"\0\s[2]A fast wind whooshes past the starflower, and one of the caterpillars almost falls!\w4 The others save them just in time, though."
+		"\0\s[2]A caterpillar wonders what's beyond the seemingly endless forest, but doesn't want to leave home."
+		"\0\s[2]An adventurous caterpillar tries to leave the starflower, but immediately crawls back once he sees a creature in the distance."
+		"\0\s[2]The caterpillars sometimes start to glow in the dark, but they have to hide from predators until it stops, so it's difficult to observe the effect."
+		"\0\s[2]A caterpillar looks around and sees a big hole in a nearby tree. He tries to go inside, but a yellow bird tries to pounce on him! He runs away just in time."
 		}
 	elseif pupa == 1
 		{
-		"\0\s[3]A pupa is blown around by the wind, but manages to hold on to the plant using its silk thread."
+		"\0\s[3]A pupa is blown around by the wind, but manages to hold on to the tree using its silk thread."
 		"\0\s[3]Inside a pupa, a caterpillar rediscovers themself. They find that they have now been rearranged into a body type more suitable for flying."
 		"\0\s[3]Inside a pupa, a caterpillar dances at a disco party."
 		"\0\s[3]A pupa can't wait to fly in the sky, like it never has before!"
@@ -42,13 +48,14 @@ RandomTalk : nonoverlap_pool
 		"\0\s[4]The galaxy butterflies chase each other, but when a butterfly is caught,\w4 the game continues until they all are caught."
 		"\0\s[4]A distracted galaxy butterfly practices over and over a loop-de-loop until it is perfectly executed, much to the awe of her friends.\w8 Then she remembers she has to lay eggs."
 		"\0\s[4]A huge purple creature charges towards a nearby tree, and the butterflies dodge out the way just in time."
-		"\0\s[4]The galaxy butterflies stop playing to witness a %(creatures) wandering through the forest."
+		"\0\s[4]The galaxy butterflies stop playing to witness a %(creatures) wandering through the galaxy forest."
 		"\0\s[4]From time to time the galaxy butterflies take turns drinking from the starflower they grew up on."
 		"\0\s[4]The butterflies challenge each other, trying to land on the highest tree in the forest.\w5 They soon get exhausted, wondering if the trees they discovered are the highest or not."
 		"\0\s[4]A butterfly poses a challenge:\w5 each butterfly has to fly higher than the previous one, in a ring formation."
 		"\0\s[4]The galaxy butterflies stare at each other's space patterned wings. At night, they try to compare their wings with the sky above."
 		"\0\s[4]Discovering a pond during their travels, the butterflies finally get to look at themselves."
 		"\0\s[4]The butterflies puddle in the mud below the trees."
+		"\0\s[4]The butterflies have discussions among themselves about the creatures they saw throughout their lives."
 		}
 	else
 		{
@@ -59,6 +66,7 @@ RandomTalk : nonoverlap_pool
 		"\0\s[1]In response to the eggs, the starflower emits various stars from inside it."
 		"\0\s[1]Water drips from the blue tree above the starflower onto a bug which was about to eat an egg. The bug crawls away as fast as he can."
 		"\0\s[1]A six-legged blue creature approaches the starflower and attempts to sniff the flower. Upon seeing the eggs, she runs away."
+		"\0\s[1]A %(creatures) walks around the Galaxy Forest, not even noticing the tiny eggs on the starflower."
 		}
 
 }

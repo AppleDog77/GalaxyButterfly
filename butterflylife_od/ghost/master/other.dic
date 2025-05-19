@@ -106,7 +106,9 @@ On_sakura.recommendsites
 //These are the websites linked in the top option of the sakura's right click menu. The format is simple; write the label of the link on the left followed by a semicolon, and then on the right, the url to link to. These should be separate strings.
 recommendsites_sakura : array
 {
-	"Link label";	"https://link.example.com/link/to/whatever/here/"
+	"Monarch Watch";	"https://www.monarchwatch.org/"
+	"Live Monarch Foundation"; "https://www.livemonarch.com/"
+	"Butterfly Indentifciation"; "https://www.butterflyidentification.com/"
 }
 
 On_sakura.portalsites 
@@ -117,8 +119,8 @@ On_sakura.portalsites
 //These are the websites linked in the second option of the sakura's right click menu. Same as above
 portalsites_sakura : array
 {
-	"Another link label";	"https://link.example.com/link/to/whatever/here/again/"
-	"A third link label";	"https://link.example.com/link/to/whatever/a/third/time/you/can/add/as/many/as/you/want/"
+	"NASA";	"https://science.nasa.gov/"
+	"Enchanted Learning";	"https://www.enchantedlearning.com/subjects/astronomy/"
 }
 
 On_kero.recommendsites
