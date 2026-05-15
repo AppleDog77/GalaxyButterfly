@@ -1,6 +1,7 @@
 charset,OSNative
+file,delete.txt01622b3c7d332a350a2c14da8f86d4e0size=56date=2025-07-24T11:19:23
 file,install.txt42916c93696953ab23f4733ed535c247size=80date=2024-05-31T06:30:56
-file,readme.txt8333e47a4677fe161d2af19c17dd8259size=1657date=2026-05-15T07:47:14
+file,readme.txtfff48944e3a16259e437b3400aea63e0size=1681date=2026-05-15T12:00:36
 file,thumbnail.pnge8ad04b90130092076a9f84312b8d840size=23553date=2024-05-31T06:49:57
 file,ghost/master/aitalk.dic72fe9722eee0bc8998fb058e16d5762fsize=5514date=2026-04-26T03:34:50
 file,ghost/master/boot.dic33a696bea3798e464bf01c13e75435e1size=2679date=2024-09-14T10:05:39

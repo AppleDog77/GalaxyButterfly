@@ -16,4 +16,4 @@ Time code by Zarla (from GT Ghost Template at https://www.ashido.com/ukagaka/)
 
 Version 1.0.0 - Released for Ghost Jam. (Fri, May 31, 2024)
 Version 1.1.0 - Added more observations, and added more words to the envelopes. (Mon, May 19, 2025)
-Version 1.2.0 - Added more observations and the Terms of Use, a homeurl, disabled uninstall depending on user settings in SSP, and corrected the spelling of Identification. (Fri, May 15, 2026)
+Version 1.2.0 - Added more observations and the Terms of Use, a homeurl, disabled uninstall depending on user settings in SSP, changed menu filenames, and corrected the spelling of Identification. (Fri, May 15, 2026)
