@@ -21,6 +21,7 @@ RandomTalk : nonoverlap_pool
 		"\0\s[2]In between constantly eating leaves to grow, a caterpillar has a few minutes to chat with his friends about the wonders of the world around them."
 		"\0\s[2]A caterpillar has become full for at least a little while. They are laying on their back,\w4 looking up at the stars."
 		"\0\s[2]The caterpillars try to jump higher than each other."
+		"\0\s[2]One of the caterpillars tries to perfect a complex trick involving rolling around a leaf, and almost falls multiple times, but she eventually succeeds."
 		"\0\s[2]An %(creatures) walks through the forest, interrupting the the caterpillars' breakfast as they turn to observe."
 		"\0\s[2]The caterpillars chase each other around, but if one is caught, the game stops immediately,\w4 and they go back to eating."
 		"\0\s[2]Sometimes a caterpillar wonders what he looks like. Other times he wonders why the trees around him are of different sizes and shapes."
@@ -70,4 +71,3 @@ RandomTalk : nonoverlap_pool
 		}
 
 }
-

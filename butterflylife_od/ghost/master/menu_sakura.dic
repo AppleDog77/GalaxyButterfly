@@ -22,7 +22,8 @@ OnSakuraMenu : all
 
 	"\![*]\q[Lay a new egg,OnNewEgg]\n\n"
 
-	"\![*]\q[Nevermind,blank]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\n\n\_l[0,264]Run Time: %(passhour):%(passmin)  %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)"	
+	"\![*]\q[Nevermind,blank]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\n\n\_l[0,264]Run Time: %(passhour):%(passmin)"
+	"\n\n %(ghostver)"
 }
 
 OnLastTalk

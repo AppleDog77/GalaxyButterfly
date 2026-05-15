@@ -69,6 +69,24 @@ OnWindowStateRestore
 		}
 }
 
+//This bit of code is what makes menu options that don't start with On direct to Select.options instead. Remove or comment it if you prefer!
+OnChoiceSelect
+{
+    EVAL("Select.%(reference0)")
+}
+
+On_vanishbutton.visible
+ {
+ 	if deleteshitai == "ON"
+ 	{
+	"1"
+	}
+	else
+	{
+	"0"
+	}
+}
+
 //Network update url. Make sure you have a / on the end of the url or it will give a warning every time users try to update! If you don't plan to use network updates you can remove this
 //IF YOU'RE USING GITHUB FOR NETWORK UPDATES: DO NOT USE github.io URLS! It will cause you pain and suffering. USE raw.githubusercontent!!!
 //To get the raw.githubusercontent link super easy:
@@ -80,10 +98,13 @@ OnWindowStateRestore
 //Tada! That's your url! Make sure you test it! The dev palette and script/network log can help with that
 On_homeurl
 {
-	""
+	"https://raw.githubusercontent.com/AppleDog77/GalaxyButterfly/main/butterflylife_od/"
 }
 
-
+ghostver
+{
+	"v1.1.0"
+}
 //—————————————————————————————— Right click menu links ——————————————————————————————
 
 //Takes an array of alternating names and urls, and formats them for use with the right click menu
@@ -108,7 +129,7 @@ recommendsites_sakura : array
 {
 	"Monarch Watch";	"https://www.monarchwatch.org/"
 	"Live Monarch Foundation"; "https://www.livemonarch.com/"
-	"Butterfly Indentifciation"; "https://www.butterflyidentification.com/"
+	"Butterfly Identification"; "https://www.butterflyidentification.com/"
 }
 
 On_sakura.portalsites 
@@ -122,18 +143,6 @@ portalsites_sakura : array
 	"NASA";	"https://science.nasa.gov/"
 	"Enchanted Learning";	"https://www.enchantedlearning.com/subjects/astronomy/"
 }
-
-On_kero.recommendsites
-{
-	FormatLinks(recommendsites_kero)
-}
-
-//These are the websites linked in the first option of the kero's right click menu. Same as above
-recommendsites_kero : array
-{
-	"These labels can be anything you want";	"https://link.example.com/link/to/whatever/here/once/more/"
-}
-
 
 //—————————————————————————————— User pronoun related ——————————————————————————————
 
@@ -201,9 +210,3 @@ username
 {
 	SHIORI3FW.UserName
 }
-
-OnChoiceSelect
-{
-    EVAL("Select.%(reference0)")
-}
-

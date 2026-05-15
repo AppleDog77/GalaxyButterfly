@@ -14,4 +14,7 @@ kero.name,Starflower
 
 icon,icon.ico
 
+//Zi: descript.txt uses the name of the balloon, while install.txt needs the directory
+
+balloon,Galaxy (Milky Way)
 sstp.allowunspecifiedsend,0
